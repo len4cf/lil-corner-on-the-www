@@ -1,11 +1,93 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/NavBar.tsx';
+import Paragraph from '../components/Paragraph.tsx';
+import { cn } from '@sglara/cn';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+
 <Layout>
-	<Welcome />
+  <div
+    class={cn(
+      "relative h-full",
+      "bg-(--bg-color-secondary)",
+      "lg:bg-(--bg-color) p-5"
+    )}
+  >
+    <main
+      class={cn(
+        "h-full bg-(--bg-color-secondary)",
+        "lg:rounded-[20px]"
+      )}
+    >
+      <div
+        class={cn(
+          "flex h-full flex-col",
+          "px-10 pt-16.25",
+          "lg:pl-35"
+        )}
+      >
+
+
+               <pre class={cn(
+                "mt-0 overflow-hidden font-bold",
+                "lg:mt-20"
+               )}>
+
+          )
+         ( _   _._
+          |_|-'_~_`-._
+       _.-'-_~_-~_-~-_`-._
+   _.-'_~-_~-_-~-_~_~-_~-_`-._
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |  []  []   []   []  [] |.  
+    |           __    ___   |
+  ._|  []  []  | .|  [___]  |_._._._._._._._._._._._._._._._._.
+  |=|________()|__|()_______|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|
+^^^^^^^^^^^^^^^ === ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    _______      ===      ===
+      ^|^             ===
+       |                 ===
+
+          </pre>
+
+
+        <div class={cn(
+          "mt-5 mb-12 flex flex-col",
+          "lg:my-20"
+          )}>
+          <Paragraph>oi. eu sou a lena.</Paragraph>
+          <Paragraph>
+            eu criei esse lugarzinho aqui pra eu ter espaço de criar,
+            armazenar e expressar qualquer coisa que eu quiser.
+          </Paragraph>
+          <Paragraph>nada aqui precisa fazer sentido.</Paragraph>
+          <Paragraph>
+            são meus pensamentos inacabados.
+          </Paragraph>
+          <Paragraph>
+            ou um video que eu vi uma vez quando eu tinha 12 anos e que me marcou.
+          </Paragraph>
+          <Paragraph>
+            ou só uma receita de bolo que eu quero fazer.
+          </Paragraph>
+        </div>
+
+      <div class={cn(
+        "mx-auto",
+        "lg:mx-0"
+      )}>
+      <NavBar/>
+
+      </div>
+
+
+      </div>
+      
+    </main>
+
+  </div>
 </Layout>

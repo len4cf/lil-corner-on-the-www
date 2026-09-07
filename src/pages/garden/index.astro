@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { cn } from '@sglara/cn';
+import Link from '../../components/Link.tsx';
+---
+
+
+<Layout title="garden" page>
+
+
+  <div class={cn(
+    "flex flex-col gap-10 items-center",
+    "lg:flex-row lg:gap-20 lg:items-start",
+    "mt-10"
+  )}>
+<pre class="mx-auto lg:m-0">
+      *-*,
+  ,*\/|`| \
+  \'  | |'| *,
+   \  `| | |/ )
+    | |'| , /
+    |'| |, /
+  __|_|_|_|__
+ [___________]
+  |         |
+  | garden  |
+  |         |
+  |_________|
+    
+</pre>
+    <ul class={cn(
+      "flex flex-col gap-4 font-baskervville w-fit",
+    )}>
+      <!-- <Link href="/digest">digest</Link> -->
+      <Link href="/garden/videos">gosto bastante desses videos</Link>
+      <Link href="/garden/sites">sites legais</Link>
+      <!-- <Link href="/lists">artigos</Link> -->
+      <!-- <Link href="/bookmarks">bookmarks</Link> -->
+      <!-- <Link href="/lists">listas</Link> -->
+      <!-- <Link href="/last-watched">ultimos assistidos</Link> -->
+      <!-- <Link href="/last-read">ultimos lidos</Link> -->
+    </ul>
+  </div>
+</Layout>

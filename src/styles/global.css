@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+  --bg-color: #73976A;
+  --bg-color-secondary: #F5F0E6;
+}
+
+
+
+@font-face {
+  font-family: "Velvelyne";
+  src: url("/fonts/Velvelyne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Velvelyne";
+  src: url("/fonts/Velvelyne-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jubilat";
+  src: url("/fonts/Jubilat-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-velve: "Velvelyne", sans-serif;
+  --font-jubilat: "Jubilat", serif;
+
+  --bg-color: var(--bg-color);
+  --bg-color-secondary: var(--bg-color-secondary);
+
+  --font-baskervville: "Baskervville", serif;
+
+}

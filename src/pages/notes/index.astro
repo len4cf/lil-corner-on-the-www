@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/Heading.tsx';
+import Link from '../../components/Link.tsx';
+import { getCollection } from 'astro:content';
+
+const notes = await getCollection('notes');
+---
+
+<Layout title="notes">
+  <Heading>notes</Heading>
+  <ul class="flex flex-col gap-4 mt-8">
+    {notes.map((note) => (
+      <li>
+        <Link href={`/notes/${note.id}`}>{note.data.title ?? note.id.replaceAll('-', ' ')}</Link>
+      </li>
+    ))}
+  </ul>
+</Layout>
