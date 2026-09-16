@@ -12,41 +12,54 @@ import Paragraph from '../../../components/Paragraph';
 
 <Layout page>
   
+  <div class="flex flex-col lg:flex-row gap-2 lg:gap-10 ">
+    <pre class="overflow-hidden font-bold">
+                                      \\\\\\\
+                                \\\\\\\\\\\\
+                              \\\\\\\\\\\\\\\
+      -----------,-|           |C>   // )\\\\|
+              ,','|          /    || ,'/////|
+    ---------,','  |         (,    ||   /////
+            ||    |          \\  ||||//''''|
+            ||    |           |||||||     _|
+    sites   ||    |______      `````\____/ \
+    legais   ||    |     ,|         _/_____/ \
+            ||  ,'    ,' |        /          |
+            ||,'    ,'   |       |         \  |
+    _________|/    ,'     |      /           | |
+    _____________,'      ,',_____|      |    | |
+                |     ,','      |      |    | |
+                |   ,','    ____|_____/    /  |
+                | ,','  __/ |             /   |
+    _____________|','   ///_/-------------/   |
+                  |===========,'
 
-  <pre class="overflow-hidden">
-                                  \\\\\\\
-                            \\\\\\\\\\\\
-                          \\\\\\\\\\\\\\\
-  -----------,-|           |C>   // )\\\\|
-           ,','|          /    || ,'/////|
----------,','  |         (,    ||   /////
-         ||    |          \\  ||||//''''|
-         ||    |           |||||||     _|
- sites   ||    |______      `````\____/ \
-legais   ||    |     ,|         _/_____/ \
-         ||  ,'    ,' |        /          |
-         ||,'    ,'   |       |         \  |
-_________|/    ,'     |      /           | |
-_____________,'      ,',_____|      |    | |
-             |     ,','      |      |    | |
-             |   ,','    ____|_____/    /  |
-             | ,','  __/ |             /   |
-_____________|','   ///_/-------------/   |
-              |===========,'
+      </pre>
 
-  </pre>
+   
+  </div>
 
+      <div class="hidden lg:block">
+        <Paragraph className='absolute w-[300px] lg:right-[2%] lg:top-20 xl:right-[5%]'>eu gosto muito de web surfar e ir por aí navegando nos espaços alheios pela internet.</Paragraph>
+        <Paragraph className='absolute w-[300px] lg:right-[12%] lg:top-60 xl:right-[25%]'>você consegue encontrar tanta coisa legal.</Paragraph>
+        <Paragraph className='absolute w-[300px] lg:right-[3%] lg:top-80 xl:right-[8%]'>e as pessoas são tão criativas e plurais.</Paragraph>
+        <Paragraph className='absolute w-[300px] lg:right-[10%] lg:top-110 xl:right-[20%]'>e as coisas estão tão deprimentes hoje em dia por conta das redes sociais <b>malignas</b> que só servem pra te prender</Paragraph>
+        <Paragraph className='absolute w-[300px] lg:right-[2%] lg:top-150 xl:right-[5%]'>e esses sites são alguns dos que eu encontro por ai e que eu gosto de revisitar toda vez que eu perco um pouco de fé na humanidade.</Paragraph>
+      </div>
+
+      <div class="block lg:hidden">
+        <Paragraph className=''>eu gosto muito de web surfar e ir por aí navegando nos espaços alheios pela internet. você consegue encontrar tanta coisa legal
+        e as pessoas são tão criativas e plurais. e as coisas estão tão deprimentes hoje em dia por conta das redes sociais malignas que só servem pra te prender
+        que eu decidi reunir os sites mais legais que eu encontro por ai e que eu gosto de revisitar toda vez que eu perco um pouco de fé na humanidade.</Paragraph>
+      </div>
+ 
   <section class="flex flex-col gap-20 mt-10">
-  <Paragraph>eu gosto muito da arte de web surfing e ir por aí navegando nos espaços alheios pela internet. você consegue encontrar tanta coisa legal<br/>
-  e as pessoas são tão criativas e plurais. e as coisas estão tão deprimentes hoje em dia por conta das redes sociais malignas que só servem pra te prender <br/>
-que eu decidi reunir os sites mais legais que eu encontro por ai e que eu gosto de revisitar toda vez que eu perco um pouco de fé na humanidade.</Paragraph>
 
-
-  <ul class="flex flex-col gap-4">
-    <LinkSite href="https://use-it.travel/" name="USE-IT travel" description="moradores locais que fazem mapas interativos e super legais das cidades que eles moram. definitivamente usuarei caso eu vá para uma dessas cidades" />
-    <LinkSite href="https://a-website-is-a-room.net/" description="um site com um monte de site legal" />
-    <LinkSite href="https://ribo.zone/" />
-  </ul>
+        <ul class="flex flex-col gap-4">
+          <LinkSite href="https://use-it.travel/" name="USE-IT travel" description="moradores locais que fazem mapas interativos e super legais das cidades que eles moram. definitivamente usuarei caso eu vá para uma dessas cidades" />
+          <LinkSite href="https://a-website-is-a-room.net/" description="um site com um monte de site legal" />
+          <LinkSite href="https://ribo.zone/" />
+        </ul>
 
 
   </section>

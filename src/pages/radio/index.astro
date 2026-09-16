@@ -1,0 +1,39 @@
+---
+import Heading from '../../components/Heading';
+import Link from '../../components/Link';
+import Paragraph from '../../components/Paragraph';
+import RandomAlbum from '../../components/RandomAlbum';
+import Layout from '../../layouts/Layout.astro';
+import data from './albums.json';
+
+const { albums } = data;
+---
+
+<Layout page>
+
+       <h3 class="text-2xl font-baskervville ">eu selecionei uma lista dos melhores albuns do mundo (na minha opinião)<br>e decidi colocar um por dia aqui</h3>
+  <p class="font-velve mt-2">mas você pode achar uma lista deles <a class="underline" href="/">aqui</a></p>
+
+      <pre class="absolute top-150 lg:right-30 hidden lg:block ">
+       
+                |
+                |    |~/
+                |   _|~
+  .============.|  (_|   |~/
+.-;____________;|.      _|~
+| [_________I__] |     (_|
+|  """"" (_) (_) |
+| .=====..=====. |
+| |:::::||:::::| |
+| '=====''=====' |  
+'----------------'
+
+    </pre>
+  
+
+  <div class="flex justify-center mt-20">
+  <RandomAlbum client:load albums={albums} />
+  </div>
+
+
+</Layout>

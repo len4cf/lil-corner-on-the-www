@@ -1,7 +1,7 @@
 const LinkSite = ({ name, description, href }: { name?: string; description?: string; href: string }) => {
   return (
     <a
-      className="flex flex-col gap-2 p-4 w-auto lg:w-175 border border-[#73976A] rounded-lg hover:bg-[#73976A] hover:text-white transition-colors"
+      className="flex flex-col gap-2 p-4 w-auto lg:w-[50%] border border-[#73976A] rounded-lg hover:bg-[#73976A] hover:text-white transition-colors"
       href={href}
       target="_blank"
       rel="noopener noreferrer"

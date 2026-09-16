@@ -1,6 +1,6 @@
-const Link = ({ children, href }: { children: React.ReactNode; href: string }) => {
+const Link = ({ children, href, ...props }: { children: React.ReactNode; href: string }) => {
   return (
-    <a className="font-baskervville lg:text-[20px] text-[16px] underline underline-offset-4 hover:text-[#73976A] transition-colors" href={href}>
+    <a className="font-baskervville lg:text-[20px] text-[16px] underline underline-offset-4 hover:text-[#73976A] transition-colors" href={href} {...props}>
       {children}
     </a>
   )
