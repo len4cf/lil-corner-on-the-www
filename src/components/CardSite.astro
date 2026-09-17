@@ -1,0 +1,24 @@
+---
+import { cn } from "@sglara/cn";
+
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+}
+
+const { name, description, href } = Astro.props as Props;
+---
+
+<div class={cn("border border-dashed p-4")}>
+  <p class="text-center">{description}</p>
+
+  <iframe
+    width="700"
+    height="300"
+    src={href}
+    title={name}
+  ></iframe>
+</div>
+
+

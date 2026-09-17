@@ -1,8 +1,8 @@
 ---
-import Heading from '../../components/Heading';
-import Link from '../../components/Link';
-import Paragraph from '../../components/Paragraph';
-import RandomAlbum from '../../components/RandomAlbum';
+import Heading from '../../components/Heading.astro';
+import Link from '../../components/Link.astro';
+import Paragraph from '../../components/Paragraph.astro';
+import RandomAlbum from '../../components/RandomAlbum.astro';
 import Layout from '../../layouts/Layout.astro';
 import data from './albums.json';
 
@@ -32,7 +32,7 @@ const { albums } = data;
   
 
   <div class="flex justify-center mt-20">
-  <RandomAlbum client:load albums={albums} />
+  <RandomAlbum albums={albums} />
   </div>
 
 

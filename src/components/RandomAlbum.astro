@@ -1,0 +1,45 @@
+---
+type Album = {
+  id: number;
+  title: string;
+  artist: string;
+  link: string;
+  cover: string;
+};
+
+interface Props {
+  albums: Album[];
+}
+
+const { albums } = Astro.props;
+
+const now = new Date();
+const day = Math.floor(now.getTime() / 86400000);
+
+const album = albums[day % albums.length];
+---
+
+<div class="mt-6 flex w-100 flex-col items-center gap-2">
+  <img
+    class="h-60 w-60 rounded-sm object-cover"
+    src={album.cover}
+    alt={`Capa de ${album.title}, de ${album.artist}`}
+  />
+
+  <p class="mt-10 text-center font-jubilat text-2xl uppercase tracking-widest">
+    {album.title}
+  </p>
+
+  <p class="font-baskervville text-xl">
+    {album.artist}
+  </p>
+
+  <a
+    href={album.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-10 font-baskervville underline"
+  >
+    ouça aqui
+  </a>
+</div>

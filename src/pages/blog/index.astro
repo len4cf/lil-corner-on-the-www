@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Heading from '../../components/Heading';
-import Link from '../../components/Link';
+import Heading from '../../components/Heading.astro';
+import Link from '../../components/Link.astro';
 import { getCollection } from 'astro:content';
 
 const notes = await getCollection('notes');
