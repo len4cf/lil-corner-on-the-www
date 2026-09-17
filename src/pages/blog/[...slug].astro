@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Paragraph from '../../components/Paragraph.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
 export async function getStaticPaths() {
   const notes = await getCollection('notes');
@@ -15,12 +14,12 @@ const { note } = Astro.props;
 const { Content } = await render(note);
 ---
 
-<Layout page>
-  <div class="mb-10">
-    <p class="text-2xl font-baskervville">{note.data.title}</p>
-    <p class="text-lg text-gray-500 font-baskervville">{note.data.date}</p>
-  </div>
-  <div class="flex flex-col gap-10 font-baskervville">
-    <Content/>
-  </div>
-</Layout>
+<PageLayout >
+    <div class="mb-10">
+      <p class="text-2xl font-baskervville" >{note.data.title}</p>
+      <p class="text-lg text-gray-500 font-baskervville" >{note.data.date}</p>
+    </div>
+    <div class="flex flex-col gap-10 font-baskervville">
+      <Content />
+    </div>
+</PageLayout>

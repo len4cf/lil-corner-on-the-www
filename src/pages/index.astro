@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import NavBar from '../components/NavBar.astro';
 import Paragraph from '../components/Paragraph.astro';
 import { cn } from '@sglara/cn';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 ---
 
-<Layout>
+<BaseLayout title='home'>
   <div
     class={cn(
       "relative h-full",
@@ -87,4 +87,4 @@ import { cn } from '@sglara/cn';
     </main>
 
   </div>
-</Layout>
+</BaseLayout>

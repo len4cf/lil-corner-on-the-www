@@ -2,10 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { cn } from '@sglara/cn';
 import Link from '../../components/Link.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 ---
 
 
-<Layout title="garden" page>
+<PageLayout title="garden">
 
 
   <div class={cn(
@@ -41,4 +42,4 @@ import Link from '../../components/Link.astro';
       <!-- <Link href="/last-read">ultimos lidos</Link> -->
     </ul>
   </div>
-</Layout>
+</PageLayout>

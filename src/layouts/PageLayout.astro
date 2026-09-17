@@ -1,0 +1,18 @@
+---
+import { slide } from 'astro:transitions';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title} >
+  <main
+    class="relative min-h-screen px-5 pt-20 md:px-10 lg:p-16 xl:p-30"
+  >
+    <slot />
+  </main>
+</BaseLayout>

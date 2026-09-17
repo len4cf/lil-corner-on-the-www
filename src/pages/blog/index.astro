@@ -1,14 +1,13 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Heading from '../../components/Heading.astro';
 import Link from '../../components/Link.astro';
 import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
 
 const notes = await getCollection('notes');
 
 ---
 
-<Layout page>
+<PageLayout title="blog" >
   <div class="flex flex-col lg:flex-row gap-20">
     <pre>
       ______________________________
@@ -28,7 +27,7 @@ const notes = await getCollection('notes');
     |  /                            /.
     \_/. __________________________/.
     </pre>
-    <ul class="flex flex-col gap-4 mt-8 text-center">
+    <ul class="flex flex-col gap-4 mt-8 text-center" >
       {notes.map((note) => (
         <li>
           <p>{note.data.date} <Link href={`/blog/${note.id}`}>{note.data.title ?? note.id.replaceAll('-', ' ')}</Link></p>
@@ -36,4 +35,4 @@ const notes = await getCollection('notes');
       ))}
     </ul>
   </div>
-</Layout>
+</PageLayout>

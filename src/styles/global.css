@@ -7,7 +7,14 @@
   --bg-color-secondary: #F5F0E6;
 }
 
-
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+    background-color: var(--bg-color-secondary);
+		line-height: 1;
+	}
 
 @font-face {
   font-family: "Velvelyne";
