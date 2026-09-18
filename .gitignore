@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# temp clones from the note-sync pipeline (scripts/fetch.mjs)
+.fetch-tmp/
+
 # generated types
 .astro/
 
