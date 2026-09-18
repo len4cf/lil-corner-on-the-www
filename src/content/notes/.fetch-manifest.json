@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-18T20:14:30.565Z",
+  "generatedAt": "2026-09-18T20:16:47.968Z",
   "files": [
     "public/notes/profile.png",
-    "src/content/notes/custom-slug.md"
+    "src/content/notes/custom-slug.md",
+    "src/content/notes/teste-cloudflate.md"
   ]
 }
