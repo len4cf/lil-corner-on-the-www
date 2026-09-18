@@ -1,20 +1,16 @@
 name: Sync notes
 
-# Pulls published notes from the note repos, post-processes them, and commits
-# the result back to this repo. Triggered when the note repo pushes (via a
-# repository_dispatch it sends), on a daily safety-net schedule, or manually.
 on:
   repository_dispatch:
     types: [notes-updated]
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # 06:00 UTC daily, as a fallback
+    - cron: '0 6 * * *' 
 
-# Which repositories to fetch published notes from. Comma-separated owner/repo.
+# qual repositorio fetch from
 env:
   REPOS: len4cf/note-taking
 
-# Allow the workflow to push the regenerated content back to the repo.
 permissions:
   contents: write
 
@@ -40,7 +36,6 @@ jobs:
 
       - name: Fetch & process notes
         env:
-          # Fine-grained PAT with "Contents: read" on the private note repo(s).
           NOTES_TOKEN: ${{ secrets.NOTES_TOKEN }}
         run: npm run fetch
 
@@ -52,6 +47,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No note changes to commit."
           else
-            git commit -m "chore(notes): sync published notes [skip ci]"
+            git commit -m "fetchando notas do note-taking"
             git push
           fi
