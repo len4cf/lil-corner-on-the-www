@@ -7,7 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "clean": "node scripts/clean.mjs",
+    "fetch": "node scripts/fetch.mjs",
+    "fetch:local": "node scripts/fetch.mjs --local",
+    "build:astro": "astro build",
+    "build": "node scripts/fetch.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,6 +23,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "astro": "^7.2.4",
+    "gray-matter": "^4.0.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"
