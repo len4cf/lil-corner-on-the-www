@@ -27,4 +27,5 @@ pnpm-debug.log*
 .idea/
 
 astro-como-usar.md
-content/
+# top-level content/ only — must NOT match src/content/ (site content lives there)
+/content/
