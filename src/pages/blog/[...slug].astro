@@ -1,6 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import Paragraph from '../../components/Paragraph.astro';
+import Heading from '../../components/Heading.astro';
+import Link from '../../components/Link.astro';
+import Blockquote from '../../components/Blockquote.astro';
 
 export async function getStaticPaths() {
   const notes = await getCollection('notes');
@@ -16,10 +20,10 @@ const { Content } = await render(note);
 
 <PageLayout >
     <div class="mb-10">
-      <p class="text-2xl font-baskervville" >{note.data.title}</p>
+      <Paragraph >{note.data.title}</Paragraph>
       <p class="text-lg text-gray-500 font-baskervville" >{note.data.date}</p>
     </div>
     <div class="flex flex-col gap-10 font-baskervville">
-      <Content />
+      <Content components={{ p: Paragraph, h1: Heading, a: Link, blockquote: Blockquote }} />
     </div>
 </PageLayout>
