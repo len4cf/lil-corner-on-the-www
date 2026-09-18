@@ -5,3 +5,5 @@ slug: custom-slug
 ---
 oiii testando
   > hahahaha
+  
+![](/notes/profile.png)
