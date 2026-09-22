@@ -27,7 +27,7 @@ const notes = await getCollection('notes');
     |  /                            /.
     \_/. __________________________/.
     </pre>
-    <ul class="flex flex-col gap-4 mt-8 text-center" >
+    <ul class="flex flex-col gap-4 mt-8" >
       {notes.map((note) => (
         <li>
           <p>{note.data.date} <Link href={`/blog/${note.id}`}>{note.data.title ?? note.id.replaceAll('-', ' ')}</Link></p>
