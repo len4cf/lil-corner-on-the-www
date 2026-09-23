@@ -10,12 +10,11 @@ const { name, description, href } = Astro.props as Props;
 
 ---
 
-
 <a
-class="flex flex-col gap-2 p-4 w-auto lg:w-[50%] border border-[#73976A] rounded-lg hover:bg-[#73976A] hover:text-white transition-colors"
+class="flex flex-col gap-2 p-4"
 href={href}
 target="_blank"
 rel="noopener noreferrer">
-  <h2 class="font-velve text-[24px]">{href}</h2>
-  <p class="font-baskervville text-[16px]">{description}</p>
+  <h2 class="font-velve text-[18px] underline">{href}</h2>
+  <blockquote class="text-[16px]!">{description}</blockquote>
 </a>

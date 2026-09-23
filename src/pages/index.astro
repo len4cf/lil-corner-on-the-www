@@ -1,39 +1,10 @@
 ---
-import NavBar from '../components/NavBar.astro';
 import Paragraph from '../components/Paragraph.astro';
-import { cn } from '@sglara/cn';
-import BaseLayout from '../layouts/BaseLayout.astro';
-
+import PageLayout from '../layouts/PageLayout.astro';
 ---
 
-<BaseLayout title='home'>
-  <div
-    class={cn(
-      "relative h-full",
-      "bg-(--bg-color-secondary)",
-      "lg:bg-(--bg-color) p-5"
-    )}
-  >
-    <main
-      class={cn(
-        "h-full bg-(--bg-color-secondary)",
-        "lg:rounded-sm"
-      )}
-    >
-      <div
-        class={cn(
-          "flex h-full flex-col",
-          "px-10 pt-16.25",
-          "lg:pl-35"
-        )}
-      >
-
-
-               <pre class={cn(
-                "mt-0 overflow-hidden font-bold",
-                "lg:mt-20"
-               )}>
-
+<PageLayout title="home">
+  <pre class="overflow-x-auto font-bold leading-none" aria-hidden="true">
           )
          ( _   _._
           |_|-'_~_`-._
@@ -48,43 +19,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     _______      ===      ===
       ^|^             ===
        |                 ===
+</pre>
 
-          </pre>
-
-
-        <div class={cn(
-          "mt-5 mb-12 flex flex-col",
-          "lg:my-20"
-          )}>
-          <Paragraph>oi. eu sou a lena.</Paragraph>
-          <Paragraph>
-            eu criei esse lugarzinho aqui pra eu ter espaço de criar,
-            armazenar e expressar qualquer coisa que eu quiser.
-          </Paragraph>
-          <Paragraph>nada aqui precisa fazer sentido.</Paragraph>
-          <Paragraph>
-            são meus pensamentos inacabados.
-          </Paragraph>
-          <Paragraph>
-            ou um video que eu vi uma vez quando eu tinha 12 anos e que me marcou.
-          </Paragraph>
-          <Paragraph>
-            ou só uma receita de bolo que eu quero fazer.
-          </Paragraph>
-        </div>
-
-      <div class={cn(
-        "mx-auto",
-        "lg:mx-0"
-      )}>
-      <NavBar/>
-
-      </div>
-
-
-      </div>
-
-    </main>
-
+  <div class="mt-5 mb-12 flex flex-col lg:my-20">
+    <Paragraph>oi. eu sou a lena.</Paragraph>
+    <Paragraph>
+      eu criei esse lugarzinho aqui pra eu ter espaço de criar, armazenar e
+      expressar qualquer coisa que eu quiser.
+    </Paragraph>
+    <Paragraph>nada aqui precisa fazer sentido.</Paragraph>
+    <Paragraph>são meus pensamentos inacabados.</Paragraph>
+    <Paragraph>
+      ou um video que eu vi uma vez quando eu tinha 12 anos e que me marcou.
+    </Paragraph>
+    <Paragraph>ou só uma receita de bolo que eu quero fazer.</Paragraph>
   </div>
-</BaseLayout>
+</PageLayout>

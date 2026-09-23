@@ -1,6 +1,6 @@
 ---
-import { slide } from 'astro:transitions';
 import BaseLayout from './BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
 
 interface Props {
   title?: string;
@@ -9,10 +9,16 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<BaseLayout title={title} >
+<BaseLayout title={title}>
   <main
-    class="relative min-h-screen px-5 pt-20 md:px-10 lg:p-16 xl:p-30"
+    class="relative flex min-h-dvh flex-col bg-(--bg-color-secondary) px-10 pt-30"
   >
-    <slot />
+    <div class="mx-auto flex w-full max-w-3xl flex-col">
+      <div class="mb-10 self-start ">
+        <NavBar />
+      </div>
+
+      <slot />
+    </div>
   </main>
 </BaseLayout>
